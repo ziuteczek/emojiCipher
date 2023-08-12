@@ -13,3 +13,20 @@ const codeEmoji = function (string) {
     }
     return emojiString;
 };
+
+const emojiToArray = function(emojiStr) {
+    const emojiRegex = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
+    const emojiArr = emojiStr.match(emojiRegex);
+    return emojiArr;
+}
+
+const unCodeEmoji = function (emojiString) {
+    const emojiArr = emojiToArray(emojiString.trim());
+    let letterString = '';
+    for (let i = 0; i < emojiArr.length; i++)
+    {
+        letterString += alphabet[emoji.indexOf(emojiArr[i])] ?? ' ';
+    }
+    console.log(letterString);
+    return letterString;
+}
