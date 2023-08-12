@@ -15,8 +15,7 @@ const codeEmoji = function (string) {
 };
 
 const emojiToArray = function(emojiStr) {
-    const emojiRegex = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-    const emojiArr = emojiStr.match(emojiRegex);
+    const emojiArr = [...emojiStr];
     return emojiArr;
 }
 
@@ -27,6 +26,5 @@ const unCodeEmoji = function (emojiString) {
     {
         letterString += alphabet[emoji.indexOf(emojiArr[i])] ?? ' ';
     }
-    console.log(letterString);
     return letterString;
 }
