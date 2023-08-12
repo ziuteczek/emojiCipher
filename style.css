@@ -25,6 +25,7 @@ h1 {
 }
 main {
     display: flex;
+    flex-direction: column;
     margin-top: 5%;
     justify-content: space-around;
 }
@@ -48,7 +49,7 @@ textarea {
 button {
     position: relative;
     overflow: hidden;
-    border: none;
+    border: 3px solid #ffffff;
     text-transform: uppercase;
     margin-top: 2em;
     margin-bottom: 2em;
@@ -84,4 +85,9 @@ footer {
 }
 .button-text {
     z-index: 1;
+}
+@media (min-width: 768px) {
+    main {
+    flex-direction: row; 
+    }
 }
