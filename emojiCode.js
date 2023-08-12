@@ -28,3 +28,17 @@ const unCodeEmoji = function (emojiString) {
     }
     return letterString;
 }
+
+const textBtn = document.querySelector('.text-btn');
+const emojiBtn = document.querySelector('.emoji-btn');
+
+const textInput = document.querySelector('.text-input');
+const emojiInput = document.querySelector('.emoji-input');
+
+textBtn.addEventListener('click',function(){
+    emojiInput.value = codeEmoji(textInput.value);
+})
+
+emojiBtn.addEventListener('click',function(){
+    textInput.value = unCodeEmoji(emojiInput.value);
+});

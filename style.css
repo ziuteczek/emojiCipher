@@ -1,0 +1,87 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*:focus {
+    outline:none;
+    border:5px solid #dfdbdc;
+}
+html {
+    font-size: 62.5%;
+}
+body  {
+    font-family: 'Indie Flower', cursive;
+    background-color: #6b0f1a;
+    background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
+    color: #ffffff;
+}
+h1 {
+    text-align: center;
+    font-size: 7rem;
+    margin-top: 5%;
+}
+main {
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-around;
+}
+h2 {
+    text-align: center;
+    font-size: 4rem;
+}
+textarea {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    width: 100%;
+    max-width: 400px;
+    min-height: 500px;
+    resize: none;
+}
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    text-transform: uppercase;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: .5em 1em;
+    font-size: 4rem;
+    z-index: 0;
+}
+button:hover {
+    color: #ffffff;
+}
+button::after {
+    content: '';
+    position: absolute;
+    background-color: #b91372;
+    height: 110%;
+    width: 110%;
+    transform: translateX(-200%);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: .3s;
+    z-index: -1;
+}
+button:hover::after {
+    transform: translateX(0);
+}
+footer {
+    text-align: center;
+    height: 30px;
+    background-color: #333;
+    font-size: 2rem;
+}
+.button-text {
+    z-index: 1;
+}
