@@ -1,8 +1,7 @@
 'use strict';
 
-const alphabet = ['a','ą','b','c','ć','d','e','ę','f','g','h','i','j','k', 'l', 'ł', 'm','n','ń','o','ó','p','q','r','s','ś','t','u','w','y','z','ź','ż',',', '.','!', '?', ';', ':',',','"',"'"];
-const emoji = ['😄','🌟','🍉','🎈','🐦','🌻','🌈','🚀','🎸','🍕','🐶','🌊','🍔','🌸','🚲','🌮','🐱','🍦','🎉','🍓','🌺','🏓','🍩','🐼','🎁','🍒','🚁','🎮','🍋','🌼','📚','🍪','🎤','🐟', '🚄', '🌅', '🌿', '🌄', '🐢', '🎣', '🚢', '🏖️'];
-
+const alphabet = ['a','ą','b','c','ć','d','e','ę','f','g','h','i','j','k', 'l', 'ł', 'm','n','ń','o','ó','p','q','r','s','ś','t','u','w','y','z','ź','ż'];
+const emoji = ["❤️", "💕", "💞", "😍", "💋", "🌹", "🌟", "🥰", "💘", "💌", "💑", "👩‍❤️‍👨", "💏", "💓", "💖", "💗", "🥂", "🎈", "🍫", "🌸", "🎀", "🎁", "📦", "🌙", "🎶", "🌠", "🍾", "🎡", "🎊", "💐", "🕊️", "💓", "😻"];
 const codeEmoji = function (string) {
     let emojiString = '';
     const formatedString = string.trim().toLocaleLowerCase();
@@ -38,6 +37,7 @@ const emojiInput = document.querySelector('.emoji-input');
 textBtn.addEventListener('click',function(){
     emojiInput.value = codeEmoji(textInput.value);
 })
+
 
 emojiBtn.addEventListener('click',function(){
     textInput.value = unCodeEmoji(emojiInput.value);
